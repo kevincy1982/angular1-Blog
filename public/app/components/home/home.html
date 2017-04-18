@@ -1,0 +1,8 @@
+<div ui-view='header'></div>
+<div ng-controller="homeCtrl as home">
+	<h1 ng-bind="home.welcomeText"></h1>
+	<input ng-model="home.inputValue" placeholder="enter Integer"><button ng-click="home.checkIfMatch(home.inputValue)">Check</button>
+	<p ng-if="home.inputValue !=''" ng-bind="home.matchTest"></p>
+	<div ui=ui-view="home1"></div>
+	<div ui=ui-view="home2"></div>
+</div>
